@@ -1,0 +1,36 @@
+#home__page {
+	.hero {
+		background-color: antiquewhite;
+	}
+
+	.case__study__section {
+		background-color: rosybrown;
+		.case__studies__container {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			gap: 3em;
+		}
+		.case__study__card {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			gap: 2em;
+			padding: 4em;
+		}
+		.case__study__card {
+			background-color: var(--seven);
+		}
+	}
+	.skills__section {
+		background-color: bisque;
+	}
+	.about__section {
+		background-color: blanchedalmond;
+	}
+	.contact__section {
+		background-color: burlywood;
+	}
+}

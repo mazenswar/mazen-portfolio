@@ -1,0 +1,236 @@
+@use "../util" as u;
+
+// Fonts are now imported using `next/font` inside layout or component files for optimization.
+* {
+	font-family: Arial, Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-weight: 500;
+	line-height: 1.1;
+	width: fit-content;
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+
+.title-text {
+	font-size: clamp(24px, 2em, 100px);
+	// font-size: clamp(u.rem(24), u.rem(16) + 2.5vw, u.rem(55));
+	// color: var(--header-text-color);
+	margin-bottom: clamp(10px, 2vw, 80px);
+}
+
+h1 {
+	font-size: clamp(24px, 2em, 100px);
+	// font-size: clamp(u.rem(24), u.rem(16) + 2.5vw, u.rem(55));
+	// color: var(--header-text-color);
+	margin-bottom: clamp(10px, 2vw, 80px);
+}
+
+h2 {
+	// font-size: clamp(u.rem(20), u.rem(26) + 1vw, u.rem(45));
+	font-size: clamp(20px, 1.8em, 80px);
+}
+
+h3 {
+	// font-size: clamp(u.rem(20), u.rem(20) + 1vw, u.rem(26));
+	font-size: clamp(20px, 1.6em, 80px);
+}
+
+h4 {
+	font-size: clamp(18px, 1.4em, 80px);
+
+	// font-size: clamp(u.rem(18), u.rem(18) + 1vw, u.rem(24));
+}
+
+h5 {
+	font-size: clamp(18px, 1.2em, 80px);
+	// font-size: clamp(u.rem(18), u.rem(18) + 1vw, u.rem(24));
+}
+
+@include u.breakpoint-down(small) {
+	h1 {
+		font-size: clamp(24px, 1.8em, 100px);
+		// font-size: clamp(u.rem(24), u.rem(16) + 2.5vw, u.rem(55));
+		// color: var(--header-text-color);
+		margin-bottom: clamp(10px, 2vw, 80px);
+	}
+
+	h2 {
+		// font-size: clamp(u.rem(20), u.rem(26) + 1vw, u.rem(45));
+		font-size: clamp(18px, 1.6em, 80px);
+	}
+
+	h3 {
+		// font-size: clamp(u.rem(20), u.rem(20) + 1vw, u.rem(26));
+		font-size: clamp(17px, 1.4em, 80px);
+	}
+
+	h4 {
+		font-size: clamp(16px, 1.2em, 80px);
+
+		// font-size: clamp(u.rem(18), u.rem(18) + 1vw, u.rem(24));
+	}
+
+	h5 {
+		font-size: clamp(16px, 1em, 80px);
+		// font-size: clamp(u.rem(18), u.rem(18) + 1vw, u.rem(24));
+	}
+}
+
+p,
+label,
+a {
+	margin-top: 0;
+	// font-size: clamp(u.rem(16), u.rem(16) + 1vw, u.rem(22));
+	font-size: clamp(16px, 0.8em, 80px);
+	// padding: u.rem(10);
+	// text-align: justify;
+}
+
+@include u.breakpoint-down(small) {
+	p {
+		margin-top: 0;
+		// font-size: clamp(u.rem(15), u.rem(9) + 3vw, u.rem(20));
+		// text-align: justify;
+	}
+}
+
+a,
+a:visited,
+a:active {
+	text-decoration: none;
+	color: inherit;
+}
+
+.link,
+.link:visited,
+.link:active {
+	color: inherit;
+	padding-bottom: 0.3vw;
+	transition: 0.5s;
+	color: var(--five);
+	font-size: inherit;
+	text-decoration: underline;
+	&:hover {
+		color: #62b4ae;
+	}
+	margin: 2vw 0;
+	// font-weight: 600;
+	// font-size: clamp(u.rem(10), u.rem(12) + 0.7vw, u.rem(20));
+	// font-style: italic;
+	// border-bottom: 1px solid;
+	overflow-wrap: break-word;
+}
+
+.linebreak {
+	white-space: pre-line;
+	line-height: 1.5;
+	@include u.breakpoint-down(medium) {
+		line-height: 1.3;
+	}
+	// line-height: 200%;
+	// line-gap-override: 200%;
+}
+
+.clickable-box,
+.clickable-box:visited,
+.clickable-box:active {
+	color: inherit;
+}
+
+.capsule-header {
+	background-color: var(--b-yellow);
+	color: var(--b-charcoal);
+	width: fit-content;
+	padding: clamp(15px, 5vw, 40px);
+	border-radius: clamp(u.rem(24), u.rem(16) + 2vw, u.rem(40)) 0
+		clamp(u.rem(24), u.rem(16) + 2vw, u.rem(40)) 0;
+}
+
+.underlined-header {
+	color: ivory;
+	text-decoration: underline;
+	text-decoration-thickness: 7px;
+	text-decoration-color: aqua;
+}
+
+.link-button:visited,
+.link-button:active {
+	box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+	padding: 1%;
+	width: fit-content;
+	background-color: var(--three);
+	color: ivory;
+	padding: 1em 2em;
+	border-radius: 2em;
+	border: none;
+	transition: 0.3s ease-in;
+	&:hover {
+		transform: scale(1.1);
+	}
+}
+
+.center-title {
+	width: 100%;
+	padding-top: 1em;
+	text-align: center;
+}
+
+.read-more {
+	color: var(--three);
+}
+
+.read-more:visited,
+.read-more:active {
+	color: purple;
+}
+
+.read-more,
+.read-more:visited,
+.read-more:active {
+	transition: 0.4s;
+	&:hover {
+		color: var(--five);
+	}
+}
+.subtext {
+	color: #565656;
+}
+
+.link-button {
+	padding: 1em 2em;
+}
+
+.link-button {
+	background: linear-gradient(
+		80deg,
+		rgba(2, 0, 36, 1) 0%,
+		rgba(82, 72, 159, 1) 0%,
+		rgba(194, 102, 167, 1) 150%
+	);
+
+	color: ivory;
+	padding: 1em 2em;
+	border-radius: 2em;
+	border: none;
+	transition: 0.3s ease-in;
+	box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+	&:hover {
+		transform: scale(1.1);
+	}
+}
+
+input[type="submit"]:disabled {
+	background: #eee;
+	transition: none;
+	&:hover {
+		transform: none;
+	}
+}
