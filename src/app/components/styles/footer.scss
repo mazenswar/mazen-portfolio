@@ -1,0 +1,30 @@
+@use "../../styles/util/" as u;
+
+.site__footer {
+	background: var(--surface);
+	color: var(--text);
+	text-align: center;
+	padding: 3.5rem 1rem;
+	font-size: 0.9rem;
+	p {
+		margin: 1em auto;
+	}
+	.backToTop {
+		display: inline-block;
+		margin-top: 0.75rem;
+		color: var(--accent);
+		text-decoration: none;
+		font-weight: 600;
+
+		&:hover,
+		&:focus {
+			text-decoration: underline;
+		}
+	}
+}
+
+@include u.breakpoint-down(small) {
+	.site__footer {
+		padding-bottom: 4rem; // keeps content clear of mobile icon row
+	}
+}

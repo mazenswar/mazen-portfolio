@@ -3,6 +3,7 @@ import React from "react";
 import calmDesktop from "./assets/calm-desktop.png";
 import aqswarDesktop from "./assets/aqswar-desktop.png";
 import Link from "next/link";
+import "./styles/case_studies_section.scss";
 function CaseStudySection() {
 	return (
 		<section className="case__study__section">
@@ -31,9 +32,9 @@ function CaseStudySection() {
 							→ Jun 2024 rebuild)
 						</p>
 						<p>
-							CALM Therapy is the private practice my partner and I founded. I
-							own everything outside the therapy room (design, code, analytics,
-							and ops).
+							CALM Therapy is a private practice that I co-founded. I own
+							everything outside the therapy room (design, code, analytics, and
+							ops).
 						</p>
 
 						<p>
@@ -90,10 +91,11 @@ function CaseStudySection() {
 						</p>
 
 						<p>
-							AQSWAR is my father{"'"}s digital archive containing more than 4
-							000 articles, scripts and photographs from two decades of Bahraini
-							journalism and art. At the outset, every file sat in unstructured
-							S3 folders with inconsistent names and zero metadata.
+							AQSWAR is digital archive project for the works of Bahraini
+							journalist Aqeel Swar containing more than 4,000 articles, scripts
+							and photographs from two decades of Bahraini journalism and art.
+							At the outset, every file sat in unstructured S3 folders with
+							inconsistent names and zero metadata.
 						</p>
 
 						<p>

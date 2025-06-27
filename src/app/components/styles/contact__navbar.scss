@@ -1,0 +1,77 @@
+/* Side contact navbar
+   Layout: fixed, vertical, monochrome icons
+-------------------------------------------------- */
+@use "../../styles/util/" as u;
+
+.contact__navbar {
+	position: fixed;
+	top: 2rem; /* near the top of viewport */
+	right: 2rem; /* flush to the right edge */
+	z-index: 1000; /* sit above page content */
+
+	/* container for icon list */
+	.content {
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem; /* space between icons */
+		align-items: center;
+	}
+
+	.buttons {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 1em 0;
+	}
+	/* icon buttons (anchor tags) */
+	.buttons a {
+		display: flex;
+		width: 80px;
+		height: 80px;
+		justify-content: center;
+		align-items: center;
+		border-radius: 50%;
+		background-color: var(--accent);
+
+		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+		opacity: 0.8;
+		transition: opacity 0.2s ease, transform 0.2s ease;
+
+		&:hover,
+		&:focus {
+			opacity: 1;
+			transform: translateY(-2px);
+		}
+
+		svg,
+		img {
+			width: 50%;
+			height: auto;
+			// height: 50%;
+		}
+	}
+}
+
+/* Responsive: tuck into bottom‑right on screens < 480px */
+@include u.breakpoint-down(medium) {
+	.contact__navbar {
+		bottom: 1rem;
+		top: auto;
+		right: 1rem;
+
+		.content {
+			.buttons {
+				flex-direction: row;
+				gap: 0 1em;
+				a {
+					width: 50px;
+					height: 50px;
+				}
+			}
+			img {
+				width: 80%;
+			}
+		}
+	}
+}

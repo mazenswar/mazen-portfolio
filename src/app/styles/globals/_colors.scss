@@ -1,12 +1,16 @@
 :root {
-	--one: #0d0b33;
-	--two: #4c2f6f;
-	--three: #4c2f6f;
-	--four: #52489f;
-	--five: #c266a7;
-	--six: #e7c8e7;
-	--seven: #fcf3e8;
-	--t1: #edede9;
-	--t2: #d6ccc2;
-	--t3: #f5ebe0;
+	--bg-1: #ffffff;
+	--surface: #f5f5f7;
+	--text: #141414;
+	--accent: #6c46ff;
+}
+
+/* Dark mode override */
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg-1: #121212;
+		--surface: #2b2b2b;
+		--text: #f5f5f0;
+		/* --accent stays the same */
+	}
 }
