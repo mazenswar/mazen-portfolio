@@ -5,6 +5,23 @@
 	--accent: #6c46ff;
 }
 
+/* -------------------------------------------------
+   Manual theme override via data-theme attribute
+   (wins over prefers-color-scheme because it appears later)
+-------------------------------------------------- */
+html[data-theme="dark"] {
+	--bg-1: #121212;
+	--surface: #2b2b2b;
+	--text: #f5f5f0;
+	/* --accent remains the same */
+}
+
+html[data-theme="light"] {
+	--bg-1: #ffffff;
+	--surface: #f5f5f7;
+	--text: #141414;
+}
+
 /* Dark mode override */
 @media (prefers-color-scheme: dark) {
 	:root {

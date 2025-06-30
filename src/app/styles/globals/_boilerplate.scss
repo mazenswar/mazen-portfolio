@@ -39,6 +39,7 @@ body {
 
 .btn.primary {
 	background: var(--accent);
+	color: ivory;
 }
 .pill {
 	background: var(--accent);
@@ -46,5 +47,51 @@ body {
 .buttons {
 	a {
 		background: var(--accent);
+	}
+}
+
+.theme__toggle {
+	/* layout */
+	position: fixed;
+	top: 1rem;
+	left: 1rem;
+	z-index: 1100;
+
+	/* size & shape */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 42px;
+	height: 42px;
+	border-radius: 50%;
+
+	/* colours use tokens so they adapt to light / dark */
+	background: var(--surface);
+	color: var(--text);
+	border: 1px solid color-mix(in srgb, var(--text) 25%, transparent 75%);
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+
+	/* interaction */
+	cursor: pointer;
+	transition: background-color 0.2s ease, transform 0.15s ease;
+
+	&:hover,
+	&:focus-visible {
+		background: var(--accent);
+		color: #fff;
+		transform: translateY(-2px);
+	}
+
+	&:active {
+		transform: translateY(0);
+	}
+}
+
+/* Optional mobile tweak: move to bottom‑left on very small screens */
+@include u.breakpoint-down(small) {
+	.theme__toggle {
+		top: auto;
+		bottom: 1rem;
+		left: 1rem;
 	}
 }
