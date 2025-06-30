@@ -12,8 +12,8 @@ function CaseStudySection() {
 
 				<div className="case__studies__container">
 					<div className="case__study__card calm">
+						<h3>Case Study #1</h3>
 						<h3>
-							Case Study #1 -{" "}
 							<Link href="https://calmtherapy.center" target="_blank">
 								CALM Therapy
 							</Link>
@@ -70,8 +70,8 @@ function CaseStudySection() {
 						</p>
 					</div>
 					<div className="case__study__card">
+						<h3>Case Study #2</h3>
 						<h3>
-							Case Study #2:{" "}
 							<Link href="https://aqswar.com" target="_blank">
 								AQSWAR Archive
 							</Link>
