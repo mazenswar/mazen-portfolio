@@ -1,5 +1,6 @@
 import React from "react";
 import "./styles/hero__section.scss";
+import Link from "next/link";
 function HeroSection() {
 	return (
 		<section className="hero__section">
@@ -17,9 +18,9 @@ function HeroSection() {
 					Swar. Former coding-bootcamp coach who thrives in fast-learning,
 					cross-disciplinary teams.
 				</p>
-				<a href="/resume.pdf" className="btn primary">
+				<Link href="/Mazen-2025.pdf" className="btn primary">
 					Download résumé
-				</a>
+				</Link>
 			</div>
 		</section>
 	);
