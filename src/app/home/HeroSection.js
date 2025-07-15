@@ -18,7 +18,13 @@ function HeroSection() {
 					Swar. Former coding-bootcamp coach who thrives in fast-learning,
 					cross-disciplinary teams.
 				</p>
-				<Link href="/resume.pdf" target="_blank" className="btn primary">
+				<Link
+					data-no-prefetch
+					href="/resume.pdf"
+					target="_blank"
+					rel="noopener noreferrer"
+					className="btn primary"
+				>
 					Résumé
 				</Link>
 			</div>
