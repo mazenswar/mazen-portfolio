@@ -1,15 +1,43 @@
-import React from "react";
+"use client";
+import React, { useState, useEffect } from "react";
 import "./styles/hero__section.scss";
 import Link from "next/link";
 import Image from "next/image";
 import logoWhite from "./assets/logo-white.webp";
+import logo from "./assets/logo.webp";
+
+function useTheme() {
+	const [isDark, setIsDark] = useState(
+		typeof document !== "undefined"
+			? document.documentElement.dataset.theme === "dark"
+			: false
+	);
+
+	useEffect(() => {
+		const html = document.documentElement;
+		const observer = new MutationObserver(() => {
+			setIsDark(html.dataset.theme === "dark");
+		});
+		observer.observe(html, {
+			attributes: true,
+			attributeFilter: ["data-theme"],
+		});
+		return () => observer.disconnect();
+	}, []);
+
+	return isDark;
+}
+
 function HeroSection() {
+	const isDark = useTheme();
+	const currentLogo = isDark ? logoWhite.src : logo.src;
+
 	return (
 		<section className="hero__section">
 			<div className="content">
 				<Image
 					priority
-					src={logoWhite.src}
+					src={currentLogo}
 					alt="logo - spreadlove"
 					width={200}
 					height={200}
