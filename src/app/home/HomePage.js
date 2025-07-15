@@ -27,7 +27,7 @@ function HomePage() {
 					content="Full-stack JavaScript & Growth engineer who ships high-performance Next.js sites and data-driven funnels."
 				/>
 				<meta property="og:url" content="https://mazenswar.dev/" />
-				<meta property="og:image" content="/og-card.png" />
+				<meta property="og:image" content="https://mazenswar.dev/og-card.png" />
 
 				{/* Twitter Card */}
 				<meta name="twitter:card" content="summary_large_image" />
@@ -39,7 +39,10 @@ function HomePage() {
 					name="twitter:description"
 					content="Full-stack JavaScript & Growth engineer who ships high-performance Next.js sites and data-driven funnels."
 				/>
-				<meta name="twitter:image" content="/og-card.png" />
+				<meta
+					name="twitter:image"
+					content="https://mazenswar.dev/og-card.png"
+				/>
 			</Head>
 
 			<main id="home__page">
