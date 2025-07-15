@@ -29,7 +29,7 @@ function CaseStudySection() {
 
 						<p>
 							<strong>Role:</strong> Co-Founder &amp; Growth / WebOps Lead (Apr
-							→ Jun 2024 rebuild)
+							2024 → Jun 2025 rebuild)
 						</p>
 						<p>
 							CALM Therapy is a private practice that I co-founded. I own
@@ -39,9 +39,9 @@ function CaseStudySection() {
 
 						<p>
 							<strong>Timeline & rebuild:</strong> I shipped CALM Therapy{"'"}s
-							first marketing site in April-June 2024; Lighthouse Performance
-							and SEO were stuck in the low-70s. One year later, from April to
-							June 2025, I led a complete rebuild on the latest Next.js, added
+							first marketing site in June 2024; Lighthouse Performance and SEO
+							were stuck in the low-70s. One year later, from April to June
+							2025, I led a complete rebuild on the latest Next.js, added
 							structured data, automated image conversion to WebP, and deferred
 							analytics scripts. Mobile Lighthouse now averages 96-99,
 							Accessibility 93, Best Practices 100, SEO 100, with every Core Web
