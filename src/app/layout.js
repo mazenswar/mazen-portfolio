@@ -37,6 +37,15 @@ export const metadata = {
 		card: "summary_large_image",
 		images: ["https://mazenswar.dev/og-card-v2.png"],
 	},
+	icons: {
+		icon: [
+			{ url: "/icons/favicon.svg", type: "image/svg+xml" },
+			{ url: "/icons/favicon-96x96.png", sizes: "96x96", type: "image/png" },
+			{ url: "/icons/favicon.ico" },
+		],
+		apple: "/icons/apple-touch-icon.png",
+		other: [{ rel: "manifest", url: "/icons/site.webmanifest" }],
+	},
 };
 
 export default function RootLayout({ children }) {
