@@ -26,7 +26,7 @@ export const metadata = {
 			"Full-stack JavaScript & Growth engineer who ships high-performance Next.js sites and data-driven funnels.",
 		images: [
 			{
-				url: "https://mazenswar.dev/og-card.png",
+				url: "https://mazenswar.dev/og-card-v1.png",
 				width: 1200,
 				height: 630,
 				alt: "Mazen Alswar – Growth & WebOps Engineer",
@@ -35,7 +35,7 @@ export const metadata = {
 	},
 	twitter: {
 		card: "summary_large_image",
-		images: ["https://mazenswar.dev/og-card.png"],
+		images: ["https://mazenswar.dev/og-card-v1.png"],
 	},
 };
 
