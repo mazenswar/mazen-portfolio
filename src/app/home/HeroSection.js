@@ -47,6 +47,12 @@ function HeroSection() {
 					target="_blank"
 					rel="noopener noreferrer"
 					className="btn primary"
+					onClick={() =>
+						window?.gtag?.("event", "download_resume", {
+							event_category: "engagement",
+							value: 1,
+						})
+					}
 				>
 					Résumé
 				</Link>
