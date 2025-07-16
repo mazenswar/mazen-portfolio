@@ -57,18 +57,23 @@ export default function RootLayout({ children }) {
 				<ContactNavbar />
 				{children}
 				{/* Google Analytics 4 */}
-				<Script
-					src="https://www.googletagmanager.com/gtag/js?id=G-41RMVT6BC5"
-					strategy="afterInteractive"
-				/>
-				<Script id="ga4-init" strategy="afterInteractive">
-					{`
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-41RMVT6BC5', { anonymize_ip: true });
-    `}
-				</Script>
+
+				{process.env.NODE_ENV === "production" && (
+					<>
+						<Script
+							src="https://www.googletagmanager.com/gtag/js?id=G-41RMVT6BC5"
+							strategy="afterInteractive"
+						/>
+						<Script id="ga4-init" strategy="afterInteractive">
+							{`
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-41RMVT6BC5', { anonymize_ip: true });
+      `}
+						</Script>
+					</>
+				)}
 				<Footer />
 			</body>
 		</html>
