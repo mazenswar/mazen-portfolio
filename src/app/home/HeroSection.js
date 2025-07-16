@@ -28,18 +28,18 @@ function HeroSection() {
 						height={200}
 					/>
 				</div>
-				<h1>Hi, I{"'"}m Mazen — Growth &amp; WebOps Engineer</h1>
+				<h1>Hi, I{"'"}m Mazen - Growth &amp; WebOps Engineer</h1>
 				<p>
 					I bridge code and analytics so marketing teams know exactly what
 					converts.
 				</p>
 				<p>
-					I{"'"}m a Growth & WebOps engineer based in Edison, NJ. I built and
-					optimised the CALM Therapy site (Next.js + AWS Amplify) and wired
-					GA4/GTM to track bookings, landing our first five private-pay clients.
-					I also run AQSWAR, a 4,000-item archive for Bahraini journalist Aqeel
-					Swar. Former coding-bootcamp coach who thrives in fast-learning,
-					cross-disciplinary teams.
+					I{"'"}m a Growth & WebOps engineer in Edison, NJ. Re-built the CALM
+					Therapy site (Next.js + AWS Amplify), wired GA4/GTM, and turned that
+					insight into our first five private-pay clients. I also run AQSWAR - a
+					5,000-item digital archive for Bahraini journalist Aqeel Swar. Former
+					coding-bootcamp coach who thrives in fast-learning, cross-disciplinary
+					teams.
 				</p>
 				<Link
 					data-no-prefetch

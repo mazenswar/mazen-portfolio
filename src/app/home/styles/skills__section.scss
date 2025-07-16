@@ -35,14 +35,14 @@
 		margin: 0;
 		padding: 0;
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
 		gap: 1rem;
 		text-align: center;
 		font-size: 0.95rem;
 	}
 
 	.skill {
-		padding: 0.5rem;
+		padding: 1rem 0;
 	}
 
 	.pill {
@@ -51,6 +51,7 @@
 		color: var(--text);
 		border-radius: 9999px;
 		transition: background-color 0.2s ease;
+		// padding: 1em 0;
 	}
 
 	/* Optional hover to reinforce accent */
