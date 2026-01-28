@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import calmDesktop from "./assets/calm-desktop.png";
+import calmThree from "./assets/CALM3.png";
 import aqswarDesktop from "./assets/aqswar-desktop.png";
 import Link from "next/link";
 import "./styles/case_studies_section.scss";
@@ -21,7 +22,7 @@ function CaseStudySection() {
 
 						{/* thumbnail – replace src with your real image path */}
 						<Image
-							src={calmDesktop.src}
+							src={calmThree.src}
 							alt="Screenshot of CALM Therapy website"
 							width={500}
 							height={250}
