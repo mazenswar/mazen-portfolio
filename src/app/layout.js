@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./styles/style.scss";
 import ContactNavbar from "./components/ContactNavbar";
 import Footer from "./components/Footer";
-import ThemeToggle from "./components/ThemeToggle";
+import SiteLogo from "./components/SiteLogo";
 
 const geistSans = Geist({
 	variable: "--font-geist-sans",
@@ -53,7 +53,7 @@ export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
 			<body className={`${geistSans.variable} ${geistMono.variable}`}>
-				<ThemeToggle />
+				<SiteLogo />
 				<ContactNavbar />
 				{children}
 				{/* Google Analytics 4 */}

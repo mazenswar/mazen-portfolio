@@ -1,0 +1,44 @@
+/* Fixed brand mark, top-left — scrolls with the viewport, click to
+   scroll back to top */
+
+.site__logo {
+	position: fixed;
+	top: 1rem;
+	left: 1rem;
+	z-index: 1100;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 44px;
+	height: 44px;
+	padding: 0;
+	border: none;
+	background: none;
+	cursor: pointer;
+
+	transition: transform 0.15s ease;
+
+	&:hover,
+	&:focus-visible {
+		transform: translateY(-2px);
+	}
+
+	img {
+		width: 100%;
+		height: auto;
+	}
+
+	.logo-dark {
+		display: none;
+	}
+}
+
+html[data-theme="dark"] .site__logo {
+	.logo-light {
+		display: none;
+	}
+	.logo-dark {
+		display: block;
+	}
+}

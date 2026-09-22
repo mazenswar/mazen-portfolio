@@ -1,5 +1,5 @@
 /* Side contact navbar
-   Layout: fixed, vertical, monochrome icons
+   Layout: fixed, vertical, translucent icon buttons
 -------------------------------------------------- */
 @use "../../styles/util/" as u;
 
@@ -24,23 +24,23 @@
 		align-items: center;
 		gap: 1em 0;
 	}
-	/* icon buttons (anchor tags) */
-	.buttons a {
+
+	/* Shared sizing for every button in the rail — links and the
+	   theme toggle — translucent so they don't crowd the page content */
+	.buttons a,
+	.buttons .theme__toggle {
 		display: flex;
 		width: 60px;
 		height: 60px;
 		justify-content: center;
 		align-items: center;
 		border-radius: 50%;
-		background-color: var(--accent);
-
 		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
-		opacity: 0.8;
-		transition: opacity 0.2s ease, transform 0.2s ease;
+		transition: background-color 0.2s ease, transform 0.2s ease;
+		cursor: pointer;
 
 		&:hover,
-		&:focus {
-			opacity: 1;
+		&:focus-visible {
 			transform: translateY(-2px);
 		}
 
@@ -48,7 +48,35 @@
 		img {
 			width: 50%;
 			height: auto;
-			// height: 50%;
+		}
+	}
+
+	/* Contact/link buttons — translucent accent glass */
+	.buttons a {
+		background-color: color-mix(in srgb, var(--accent) 55%, transparent 45%);
+		backdrop-filter: blur(6px);
+		-webkit-backdrop-filter: blur(6px);
+
+		&:hover,
+		&:focus-visible {
+			background-color: var(--accent);
+		}
+	}
+
+	/* Theme toggle — visually distinct: outlined, surface-tinted glass
+	   (it's a setting, not a link) */
+	.buttons .theme__toggle {
+		background-color: color-mix(in srgb, var(--surface) 55%, transparent 45%);
+		backdrop-filter: blur(6px);
+		-webkit-backdrop-filter: blur(6px);
+		border: 1.5px solid color-mix(in srgb, var(--text) 30%, transparent 70%);
+		font-size: 1.3rem;
+		line-height: 1;
+		padding: 0;
+
+		&:hover,
+		&:focus-visible {
+			background-color: var(--surface);
 		}
 	}
 }
@@ -64,7 +92,9 @@
 			.buttons {
 				flex-direction: row;
 				gap: 0 1em;
-				a {
+
+				a,
+				.theme__toggle {
 					width: 50px;
 					height: 50px;
 				}

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import React from "react";
+import ThemeToggle from "./ThemeToggle";
 const linkedInImage = "/images/icons/LinkedIn.png";
 const emailImg = "/images/icons/Email.png";
 
@@ -8,9 +9,11 @@ import "./styles/contact__navbar.scss";
 
 function ContactNavbar() {
 	return (
-		<nav className="contact__navbar" aria-label="Contact links">
+		<nav className="contact__navbar" aria-label="Contact links and theme toggle">
 			<div className="content">
 				<div className="buttons">
+					<ThemeToggle />
+
 					<Link
 						href="mailto:workwithmazen@proton.me"
 						aria-label="Email Mazen"

@@ -3,60 +3,73 @@
 
 /* ---------------------------------------------
    Hero Section
-   Minimal black‑and‑white layout with purple accent
+   Single centered column: photo+title pair, bio, CTA
 ---------------------------------------------- */
 
 /* Accent colour (nebula‑style purple) */
 $accent: #6c46ff;
 
-/* Default (desktop / large) */
-.logo-dark {
-	display: none;
-}
-
-html[data-theme="dark"] .logo-light {
-	display: none;
-}
-html[data-theme="dark"] .logo-dark {
-	display: block;
-}
 .hero__section {
 	min-height: 100vh;
 	display: flex;
 	align-items: center;
+
 	.content {
+		width: 100%;
 		padding-block: 4rem 3rem;
 		padding-inline: 1rem;
-		max-width: 900px;
+		max-width: 720px;
 		margin-inline: auto;
 		display: flex;
 		flex-direction: column;
+		align-items: center;
+		gap: 1.75rem;
+		text-align: center;
+	}
+
+	/* Photo + title paired side by side */
+	.hero__identity {
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		gap: 1.5rem;
-		text-align: center; // centre headlines & button
+		flex-wrap: wrap;
+	}
+
+	.hero__photo {
+		width: 120px;
+		height: 120px;
+		border-radius: 50%;
+		object-fit: cover;
+		box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+		border: 3px solid var(--surface);
+		flex-shrink: 0;
 	}
 
 	h1 {
-		font-size: clamp(2.2rem, 4vw + 1rem, 3rem);
+		font-size: clamp(1.8rem, 2.6vw + 1rem, 2.6rem);
 		font-weight: 700;
 		line-height: 1.2;
+		text-align: left;
+		max-width: 360px;
 	}
 
-	p {
+	.hero__bio p {
 		font-size: 1rem;
-		line-height: 1.6;
+		line-height: 1.65;
 		max-width: 65ch;
+		margin-top: 0;
+		margin-bottom: 1.1rem;
 		margin-inline: auto;
 
-		&:first-of-type {
-			font-weight: 600;
+		&:last-child {
+			margin-bottom: 0;
 		}
 	}
 
 	/* Primary CTA */
 	.btn.primary {
 		display: inline-block;
-		align-self: center;
-		margin-top: 0.5rem;
 		padding: 0.75rem 1.75rem;
 		font-size: 1rem;
 		font-weight: 600;
@@ -78,10 +91,16 @@ html[data-theme="dark"] .logo-dark {
 	}
 }
 
-/* Tablet and down */
+/* Small screens: stack photo above title */
 @include u.breakpoint-down(medium) {
 	.hero__section {
-		/* no specific tablet overrides yet */
+		.hero__identity {
+			flex-direction: column;
+		}
+
+		h1 {
+			text-align: center;
+		}
 	}
 }
 
@@ -90,8 +109,13 @@ html[data-theme="dark"] .logo-dark {
 	.hero__section {
 		padding-block: 3rem 2rem;
 
+		.hero__photo {
+			width: 110px;
+			height: 110px;
+		}
+
 		h1 {
-			font-size: clamp(1.8rem, 6vw + 0.8rem, 2.4rem);
+			font-size: clamp(1.6rem, 5vw + 0.8rem, 2rem);
 		}
 	}
 }

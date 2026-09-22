@@ -3,6 +3,7 @@ import "../styles/components/home.scss";
 import CaseStudySection from "./CaseStudySection";
 import SkillsSection from "./SkillsSection";
 import HeroSection from "./HeroSection";
+import CtaSection from "./CtaSection";
 
 function HomePage() {
 	return (
@@ -10,6 +11,7 @@ function HomePage() {
 			<HeroSection />
 			<CaseStudySection />
 			<SkillsSection />
+			<CtaSection />
 		</main>
 	);
 }

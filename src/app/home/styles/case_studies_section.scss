@@ -113,18 +113,17 @@
 	}
 
 	h3 a {
-		color: var(--text);
+		color: var(--accent-text);
 		text-decoration: none;
 		background-image: linear-gradient(var(--accent-text), var(--accent-text));
 		background-repeat: no-repeat;
 		background-position: left bottom;
-		background-size: 0% 2px;
-		transition: background-size 0.25s ease, color 0.25s ease;
+		background-size: 100% 1px;
+		transition: background-size 0.25s ease;
 		padding-bottom: 2px;
 
 		&:hover,
 		&:focus-visible {
-			color: var(--accent-text);
 			background-size: 100% 2px;
 		}
 	}
