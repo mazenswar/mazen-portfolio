@@ -31,17 +31,29 @@ function HeroSection() {
 				</div>
 				<h1>Hi, I{"'"}m Mazen - Web Developer &amp; Designer</h1>
 				<p>
-					I build fast, beautiful websites for businesses and help them grow
-					online.
+					I build fast, beautiful and accessible websites for businesses and
+					help them grow online.
 				</p>
 				<p>
-					I{"'"}m a web developer and designer based in Edison, NJ. I build
-					websites using Next.js, and modern CMS tools. My work spans private
-					therapy practices, small businesses, and digital archive projects. I
-					have a diverse background with experience in communications,
-					diplomacy, and digital marketing which influence how I approach every
-					project. I love building sites that are easy to use, look great and
-					reflect the spirit and vision of their owners
+					I{"'"}m a web developer and digital marketer based in Edison, NJ. I
+					love helping small businesses develop a meaningful web presence that
+					helps them thrive and reach new heights.
+				</p>
+				<p>
+					I studied public relations for my BA and did a master's in media
+					studies this helped me develop my writing and analytical skills, which
+					helped me in my role as a diplomat serving the Kingdom of Bahrain. I
+					later started to gravitate towards tech and was really interested in
+					the idea of building websites which led me to to join a coding
+					bootcamp and learn web development. I then spent years embarking on a
+					self-learning journey in which I honed and expanded my skills. These
+					skills enabled me to create websites for businesses and passion
+					projects some of which I still maintain.
+				</p>
+				<p>
+					I love the idea of helping build something from scratch and
+					translating abstract ideas and visions into tangible usable
+					experiences.
 				</p>
 				<Link
 					data-no-prefetch

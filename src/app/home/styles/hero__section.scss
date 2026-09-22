@@ -21,7 +21,9 @@ html[data-theme="dark"] .logo-dark {
 	display: block;
 }
 .hero__section {
-	height: 100vh;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
 	.content {
 		padding-block: 4rem 3rem;
 		padding-inline: 1rem;
