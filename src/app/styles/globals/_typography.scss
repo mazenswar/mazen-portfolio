@@ -120,15 +120,16 @@ a:active {
 	color: var(--five);
 	font-size: inherit;
 	text-decoration: underline;
-	&:hover {
-		color: #62b4ae;
-	}
 	margin: 2vw 0;
 	// font-weight: 600;
 	// font-size: clamp(u.rem(10), u.rem(12) + 0.7vw, u.rem(20));
 	// font-style: italic;
 	// border-bottom: 1px solid;
 	overflow-wrap: break-word;
+
+	&:hover {
+		color: #62b4ae;
+	}
 }
 
 .linebreak {

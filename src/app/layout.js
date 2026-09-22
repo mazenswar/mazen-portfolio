@@ -16,21 +16,21 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-	title: "Mazen Alswar - Growth & WebOps Engineer",
+	title: "Mazen Alswar - Web Developer & Designer",
 	description:
-		"Full-stack JavaScript & Growth engineer who ships high-performance Next.js sites and data-driven funnels.",
+		"Web developer and designer who builds fast, beautiful websites for businesses and helps them grow online.",
 	openGraph: {
 		type: "website",
 		url: "https://mazenswar.dev/",
-		title: "Mazen Alswar - Growth & WebOps Engineer",
+		title: "Mazen Alswar - Web Developer & Designer",
 		description:
-			"Full-stack JavaScript & Growth engineer who ships high-performance Next.js sites and data-driven funnels.",
+			"Web developer and designer who builds fast, beautiful websites for businesses and helps them grow online.",
 		images: [
 			{
 				url: "https://mazenswar.dev/og-card-v2.png",
 				width: 1200,
 				height: 630,
-				alt: "Mazen Alswar - Growth & WebOps Engineer",
+				alt: "Mazen Alswar - Web Developer & Designer",
 			},
 		],
 	},

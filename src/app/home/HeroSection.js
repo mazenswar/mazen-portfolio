@@ -3,8 +3,9 @@ import React from "react";
 import "./styles/hero__section.scss";
 import Link from "next/link";
 import Image from "next/image";
-import logoWhite from "./assets/logo-white.webp";
-import logo from "./assets/logo.webp";
+
+const logo = { src: "/images/logo/logo.webp" };
+const logoWhite = { src: "/images/logo/logo-white.webp" };
 
 function HeroSection() {
 	return (
@@ -15,7 +16,7 @@ function HeroSection() {
 						className="logo-light"
 						priority
 						src={logo.src}
-						alt="logo - spreadlove light"
+						alt="Mazen Alswar logo"
 						width={200}
 						height={200}
 					/>
@@ -23,27 +24,28 @@ function HeroSection() {
 						className="logo-dark"
 						priority
 						src={logoWhite.src}
-						alt="logo - spreadlove dark"
+						alt="Mazen Alswar logo"
 						width={200}
 						height={200}
 					/>
 				</div>
-				<h1>Hi, I{"'"}m Mazen - Growth &amp; WebOps Engineer</h1>
+				<h1>Hi, I{"'"}m Mazen - Web Developer &amp; Designer</h1>
 				<p>
-					I bridge code and analytics so marketing teams know exactly what
-					converts.
+					I build fast, beautiful websites for businesses and help them grow
+					online.
 				</p>
 				<p>
-					I{"'"}m a Growth & WebOps engineer in Edison, NJ. Re-built the CALM
-					Therapy site (Next.js + AWS Amplify), wired GA4/GTM, and turned that
-					insight into our first five private-pay clients. I also run AQSWAR - a
-					5,000-item digital archive for Bahraini journalist Aqeel Swar. Former
-					coding-bootcamp coach who thrives in fast-learning, cross-disciplinary
-					teams.
+					I{"'"}m a web developer and designer based in Edison, NJ. I build
+					websites using Next.js, and modern CMS tools. My work spans private
+					therapy practices, small businesses, and digital archive projects. I
+					have a diverse background with experience in communications,
+					diplomacy, and digital marketing which influence how I approach every
+					project. I love building sites that are easy to use, look great and
+					reflect the spirit and vision of their owners
 				</p>
 				<Link
 					data-no-prefetch
-					href="/resume.pdf"
+					href="/mazen-resume.pdf"
 					target="_blank"
 					rel="noopener noreferrer"
 					className="btn primary"

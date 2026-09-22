@@ -2,41 +2,32 @@
 
 **Live ➜ <https://mazenswar.dev>**
 
-A single‑page site that showcases my Growth & WebOps work: high‑performance Next.js builds, GA4 analytics wiring, and SEO / Lighthouse wins.
+A single-page portfolio showcasing my work as a web developer and designer — production-ready Next.js builds, analytics wiring, and performance / SEO optimization for real client projects.
 
 ## ✨ Highlights
 
-| Feature                               | Why it matters                                                                                                                                         |
-| ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Case Study – CALM Therapy**         | Re‑built marketing site (Next.js + Amplify) → Mobile Lighthouse **72 → 97**, SEO **70 → 100**, first five private‑pay clients via GA4 funnel insights. |
-| **Case Study – AQSWAR Archive**       | 5,000‑item journalism archive; Amplify GraphQL backend, React front‑end, batch OCR v2 in progress.                                                     |
-| **Dark / Light theme + dynamic logo** | CSS‑ only theme switch with Core Web Vitals‑safe hydration.                                                                                            |
-| **Instant contact rail**              | Email, LinkedIn, GitHub links fixed right; résumé PDF opens in new tab.                                                                                |
+| Feature                     | Why it matters                                                                                                                 |
+| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| **Selected Work**           | Five projects (CALM Therapy, AQSWAR Archive, Binswar LLC, Eco Lawn, Color Cutoutz) with role, stack, and outcomes for each.    |
+| **CALM Therapy case study** | Next.js site on Vercel, mid-60s → 96-99 mobile Lighthouse after a performance overhaul, GA4 + GTM analytics, Google Ads pilot. |
+| **AQSWAR Archive**          | 4,000+ item digital journalism archive with a filterable React interface; Arabic OCR search on the 2027 roadmap.               |
+| **Dark / light theme**      | CSS-variable theme switch with a matching light/dark logo.                                                                     |
+| **Instant contact rail**    | Email, LinkedIn, and Binswar links fixed to the viewport; résumé PDF opens in a new tab.                                       |
 
 ## 🛠 Tech Stack
 
-- **Next.js 14** (App Router)
-- **React 18**, SCSS Modules, CSS variables
-- **Vercel** CI / CD & Preview Deploys
-- **Lighthouse CI** budget in GitHub Actions
-- **GA4 + GTM** event wiring
+- **Next.js 15** (App Router)
+- **React 19**, SCSS, CSS custom properties for theming
+- **Vercel** for hosting and deploys
+- **GA4 + Google Tag Manager** event wiring
 
-## Local development
+## Project structure
 
-```bash
-git clone https://github.com/mazenswar/portfolio.git
-cd portfolio
-npm install        # or yarn / pnpm
-npm run dev        # open http://localhost:3000
-```
-
-Build and preview production:
-
-```bash
-npm run build
-npm start
-```
+- `src/app` — pages, layout, metadata (`layout.js`), `robots.js`, `sitemap.js`
+- `src/app/home` — homepage sections (Hero, Selected Work, Skills)
+- `src/app/components` — shared components (contact nav, footer, theme toggle)
+- `public/images` — all site imagery (logo, icons, project screenshots)
 
 ## License
 
-MIT © Mazen Alswar
+MIT © Mazen Alswar

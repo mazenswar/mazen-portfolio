@@ -1,130 +1,175 @@
 import Image from "next/image";
 import React from "react";
-import calmDesktop from "./assets/calm-desktop.png";
-import calmThree from "./assets/CALM3.png";
-import aqswarDesktop from "./assets/aqswar-desktop.png";
 import Link from "next/link";
 import "./styles/case_studies_section.scss";
+
+const projects = [
+	{
+		className: "",
+		link: "https://binswar.com",
+		linkLabel: "Binswar",
+		image: "/images/projects/binswar.webp",
+		alt: "Screenshot of the Binswar LLC website",
+		width: 500,
+		height: 250,
+		role: "Designer & Developer",
+		description: (
+			<p>
+				Binswar is my own consultancy. I designed and built the site to reflect
+				my professional identity — clean, minimal, and intentional. It serves as
+				both a business presence and a direct demonstration of my design
+				sensibility and development standards.
+			</p>
+		),
+		stack: "Next.js · Vercel",
+	},
+	{
+		className: "",
+		link: "https://calmtherapy.center",
+		linkLabel: "CALM Therapy",
+		image: "/images/projects/calm.webp",
+		alt: "Screenshot of CALM Therapy website",
+		width: 500,
+		height: 250,
+		role: "Web Developer & Digital Marketing Consultant",
+		description: (
+			<p>
+				I led the design, development, and growth strategy for CALM Therapy from
+				launch through multiple rebuilds. Built on Next.js and deployed on
+				Vercel, the site went from mid-60s Lighthouse scores to 96-99 on mobile
+				after a full performance overhaul. I set up GA4 and Google Tag Manager
+				for analytics, ran a Google Ads pilot for paid acquisition, and
+				implemented structured data, WebP image conversion, and Core Web Vitals
+				optimization.
+			</p>
+		),
+		stack: "Next.js · Vercel · Google Tag Manager · GA4 · Lighthouse CI",
+	},
+	{
+		className: "",
+		link: "https://aqswar.com",
+		linkLabel: "AQSWAR Archive",
+		image: "/images/projects/aqswar.webp",
+		alt: "Screenshot of the AQSWAR literary archive",
+		width: 420,
+		height: 300,
+		role: "Solo Developer & Designer",
+		description: (
+			<>
+				<p>
+					AQSWAR is a digital archive for the works of Bahraini journalist Aqeel
+					Swar, containing more than 4,000 articles, scripts, and photographs
+					spanning two decades of Bahraini journalism and art. I built the
+					archive from scratch — normalizing filenames, structuring metadata,
+					and building a filterable React interface that lets readers browse by
+					year, publisher, or medium.
+				</p>
+				<p>
+					2027 roadmap: full-text Arabic search powered by Google Cloud Vision
+					API OCR. The goal is to make every document in the archive searchable
+					by phrase, topic, or person. OCR accuracy on Arabic handwritten and
+					printed text remains a challenge, and the implementation is being
+					carefully tested before full rollout.
+				</p>
+			</>
+		),
+		stack:
+			"Next.js · Vercel · Google Tag Manager · GA4 · Lighthouse CI · Amazon S3",
+	},
+	{
+		className: "",
+		link: "https://ecolawn.us",
+		linkLabel: "Eco Lawn",
+		image: "/images/projects/ecolawn.webp",
+		alt: "Screenshot of the Eco Lawn website",
+		width: 500,
+		height: 250,
+		role: "Solo Developer",
+		description: (
+			<p>
+				Eco Lawn is a local lawn care business in New Jersey. I built their
+				website to establish a professional digital presence optimized for local
+				SEO and AEO. The site is connected to Google Analytics and structured
+				for discoverability in both traditional search and AI-driven search
+				experiences.
+			</p>
+		),
+		stack: "Next.js · Vercel · GA4",
+	},
+	{
+		className: "",
+		link: "https://colorcutoutz.com",
+		linkLabel: "Color Cutoutz",
+		image: "/images/projects/colorcutoutz.webp",
+		alt: "Screenshot of the Color Cutoutz website",
+		width: 500,
+		height: 250,
+		role: "Solo Developer",
+		description: (
+			<p>
+				Color Cutoutz is a hair salon client. I built their site with a
+				mobile-first design optimized for local SEO and AEO, connected to Google
+				Analytics, and structured to support their digital presence and attract
+				new clients through search.
+			</p>
+		),
+		stack: "Next.js · Vercel · GA4",
+	},
+];
+
 function CaseStudySection() {
 	return (
 		<section className="case__study__section">
 			<div className="content">
-				{/* ///////////////////////////////// */}
-
-				<div className="case__studies__container">
-					<div className="case__study__card calm">
-						<h3>Case Study #1</h3>
-						<h3>
-							<Link href="https://calmtherapy.center" target="_blank">
-								CALM Therapy
-							</Link>
-						</h3>
-
-						{/* thumbnail – replace src with your real image path */}
-						<Image
-							src={calmThree.src}
-							alt="Screenshot of CALM Therapy website"
-							width={500}
-							height={250}
-						/>
-
-						<p>
-							<strong>Role:</strong> Co-Founder &amp; Growth / WebOps Lead (Apr
-							2024 → Jun 2025 rebuild)
-						</p>
-						<p>
-							CALM Therapy is a private practice that I co-founded. I own
-							everything outside the therapy room (design, code, analytics, and
-							ops).
-						</p>
-
-						<p>
-							<strong>Timeline & rebuild:</strong> I shipped CALM Therapy{"'"}s
-							first marketing site in June 2024; Lighthouse Performance and SEO
-							were stuck in the low-70s. One year later, from April to June
-							2025, I led a complete rebuild on the latest Next.js, added
-							structured data, automated image conversion to WebP, and deferred
-							analytics scripts. Mobile Lighthouse now averages 96-99,
-							Accessibility 93, Best Practices 100, SEO 100, with every Core Web
-							Vital solidly in the “Good” band.
-						</p>
-
-						<p>
-							<strong>Performance &amp; SEO:</strong> converted all images to
-							WebP, added build-time compression, and set up a cron-driven
-							service-worker cache for Medium blog content. Mobile Lighthouse
-							now averages 96-99, Accessibility 93, Best Practices 100, SEO 100,
-							and every Core Web Vital is “Good” (previously Performance and SEO
-							were stuck in the mid-60s).
-						</p>
-
-						<p>
-							<strong>Experimentation:</strong> launched a policy-compliant
-							Google Ads pilot to validate paid acquisition; first leads were
-							unqualified, so I{"'"}m iterating on keywords and landing-page
-							copy.
-						</p>
-
-						<p>
-							<strong>Stack:</strong> Next.js · AWS Amplify · Google Tag Manager
-							· GA4 · Lighthouse CI · Medium RSS/REST cache script
-						</p>
-					</div>
-					<div className="case__study__card">
-						<h3>Case Study #2</h3>
-						<h3>
-							<Link href="https://aqswar.com" target="_blank">
-								AQSWAR Archive
-							</Link>
-						</h3>
-
-						{/* thumbnail – replace src with your real image path */}
-						<Image
-							src={aqswarDesktop.src}
-							alt="Screenshot of the AQSWAR literary archive"
-							width={420}
-							height={300}
-						/>
-
-						<p>
-							<strong>Role:</strong> Solo Developer &amp; Digital Archivist (Jun
-							→ Sep 2023 build; v2 in progress 2025)
-						</p>
-
-						<p>
-							AQSWAR is digital archive project for the works of Bahraini
-							journalist Aqeel Swar containing more than 4,000 articles, scripts
-							and photographs from two decades of Bahraini journalism and art.
-							At the outset, every file sat in unstructured S3 folders with
-							inconsistent names and zero metadata.
-						</p>
-
-						<p>
-							<strong>Initial build (2023):</strong> normalised every filename
-							to
-							<code> YYYY-MM-DD-title.ext </code>, wrote a Node CLI that walks
-							S3, extracts dates and categories and seeds DynamoDB through AWS
-							Amplify{"'"}s GraphQL API (AppSync). I then built a vanilla React
-							front-end that lets readers filter by year, publisher or medium
-							and renders high-resolution scans on demand.
-						</p>
-
-						<p>
-							<strong>v2 roadmap (2025):</strong> upgrading to a fully
-							searchable text archive: batch-OCR with Google Vision, human QA
-							workflow and an instant-search UI so visitors can find articles by
-							phrase, topic or person. Original images will stay available as
-							reference.
-						</p>
-
-						<p>
-							<strong>Stack:</strong> React · AWS Amplify · AppSync GraphQL ·
-							DynamoDB · S3 · Node.js CLI scripts · (planned) Google Vision OCR
-							&amp; full-text search
-						</p>
-					</div>
+				<div className="section__heading">
+					<h2>Selected Work</h2>
+					<p className="section__subtitle">
+						A few of the projects I&apos;ve designed, built, and grown.
+					</p>
 				</div>
-				{/* ///////////////////////////////// */}
+				<div className="case__studies__container">
+					{projects.map((project, index) => (
+						<article
+							className={`case__study__card ${project.className}`.trim()}
+							key={project.link}
+						>
+							<div className="card__media">
+								<Image
+									src={project.image}
+									alt={project.alt}
+									width={project.width}
+									height={project.height}
+								/>
+							</div>
+
+							<div className="card__body">
+								<span className="card__index">
+									Project {String(index + 1).padStart(2, "0")}
+								</span>
+								<h3>
+									<Link
+										href={project.link}
+										target="_blank"
+										rel="noopener noreferrer"
+										aria-label={`${project.linkLabel} (opens in a new tab)`}
+									>
+										{project.linkLabel}
+									</Link>
+								</h3>
+
+								{project.role && <p className="card__role">{project.role}</p>}
+
+								<div className="card__description">{project.description}</div>
+
+								<ul className="card__stack">
+									{project.stack.split(" · ").map((tech) => (
+										<li key={tech}>{tech}</li>
+									))}
+								</ul>
+							</div>
+						</article>
+					))}
+				</div>
 			</div>
 		</section>
 	);

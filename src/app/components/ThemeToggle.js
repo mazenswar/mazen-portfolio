@@ -5,7 +5,10 @@ import { useEffect, useState } from "react";
 function ThemeToggle() {
 	const [theme, setTheme] = useState("light");
 
-	// Read initial theme from localStorage or system preference
+	// Read initial theme from localStorage or system preference.
+	// Runs in an effect (not a lazy useState initializer) so the server-rendered
+	// default matches the client's first render, avoiding a hydration mismatch.
+	/* eslint-disable react-hooks/set-state-in-effect */
 	useEffect(() => {
 		const stored = window.localStorage.getItem("preferred-theme");
 		if (stored === "dark" || stored === "light") {
@@ -20,6 +23,7 @@ function ThemeToggle() {
 			document.documentElement.dataset.theme = initial;
 		}
 	}, []);
+	/* eslint-enable react-hooks/set-state-in-effect */
 
 	// Toggle handler
 	const toggleTheme = () => {
