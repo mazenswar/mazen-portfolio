@@ -15,10 +15,11 @@ const projects = [
 		role: "Designer & Developer",
 		description: (
 			<p>
-				Binswar is my own consultancy. I designed and built the site to reflect
-				my professional identity — clean, minimal, and intentional. It serves as
-				both a business presence and a direct demonstration of my design
-				sensibility and development standards.
+				Binswar is my web development and digital marketing consultancy. I
+				designed and built the site to reflect my vision and approach to work:
+				modern, clean, and built with intention. It doubles as both a business
+				presence and a live example of my design sensibility and development
+				standards, from performance to accessibility to SEO.
 			</p>
 		),
 		stack: "Next.js · Vercel",
@@ -36,11 +37,11 @@ const projects = [
 			<p>
 				I led the design, development, and growth strategy for CALM Therapy from
 				launch through multiple rebuilds. Built on Next.js and deployed on
-				Vercel, the site went from mid-60s Lighthouse scores to 96-99 on mobile
-				after a full performance overhaul. I set up GA4 and Google Tag Manager
-				for analytics, ran a Google Ads pilot for paid acquisition, and
-				implemented structured data, WebP image conversion, and Core Web Vitals
-				optimization.
+				Vercel, with continuous performance work bringing mobile Lighthouse
+				scores to 96-99 through a full optimization overhaul. I set up GA4 and
+				Google Tag Manager for analytics, ran a Google Ads pilot for paid
+				acquisition, and implemented structured data, WebP image conversion, and
+				Core Web Vitals optimization.
 			</p>
 		),
 		stack: "Next.js · Vercel · Google Tag Manager · GA4 · Lighthouse CI",
@@ -60,8 +61,8 @@ const projects = [
 					AQSWAR is a digital archive for the works of Bahraini journalist Aqeel
 					Swar, containing more than 4,000 articles, scripts, and photographs
 					spanning two decades of Bahraini journalism and art. I built the
-					archive from scratch — normalizing filenames, structuring metadata,
-					and building a filterable React interface that lets readers browse by
+					archive from scratch, normalizing filenames, structuring metadata, and
+					building a filterable React interface that lets readers browse by
 					year, publisher, or medium.
 				</p>
 				<p>
@@ -87,11 +88,10 @@ const projects = [
 		role: "Solo Developer",
 		description: (
 			<p>
-				Eco Lawn is a local lawn care business in New Jersey. I built their
-				website to establish a professional digital presence optimized for local
-				SEO and AEO. The site is connected to Google Analytics and structured
-				for discoverability in both traditional search and AI-driven search
-				experiences.
+				Eco Lawn is a local lawn care business in New Jersey. I built their site
+				to establish a professional digital presence optimized for local SEO and
+				AEO, with clean on-page structure that helps both search engines and
+				potential customers quickly find what they need.
 			</p>
 		),
 		stack: "Next.js · Vercel · GA4",
@@ -107,10 +107,10 @@ const projects = [
 		role: "Solo Developer",
 		description: (
 			<p>
-				Color Cutoutz is a hair salon client. I built their site with a
-				mobile-first design optimized for local SEO and AEO, connected to Google
-				Analytics, and structured to support their digital presence and attract
-				new clients through search.
+				Color Cutoutz is a hair salon client. I built the site mobile-first,
+				since most of their traffic comes from people searching on the go, with
+				local SEO and AEO baked in to help new clients find and book with them
+				through search.
 			</p>
 		),
 		stack: "Next.js · Vercel · GA4",
